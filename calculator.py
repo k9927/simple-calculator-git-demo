@@ -20,13 +20,13 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    """Return a divided by b.
+    """Return a divided by b, rounded to 2 decimal places.
 
     Raises ValueError with a friendly message when b is zero.
     """
     if b == 0:
         raise ValueError("Cannot divide by zero")
-    return a / b
+    return round(a / b, 2)
 
 
 OPERATIONS = {

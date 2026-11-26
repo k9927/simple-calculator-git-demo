@@ -6,7 +6,7 @@ Git branching, merging and merge-conflict resolution.
 ## Features
 
 - Addition, subtraction, multiplication and division
-- Division: shows a clear error message when dividing by zero
+- Division: results are rounded to 2 decimal places, and dividing by zero shows a clear error message
 
 ## How to run
 
