@@ -6,7 +6,7 @@ Git branching, merging and merge-conflict resolution.
 ## Features
 
 - Addition, subtraction, multiplication and division
-- Division: returns the raw result of a / b
+- Division: shows a clear error message when dividing by zero
 
 ## How to run
 
