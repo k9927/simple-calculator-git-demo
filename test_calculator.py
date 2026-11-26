@@ -20,6 +20,9 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             calculate(1, "%", 2)
 
+    def test_divide_rounds_to_two_decimals(self):
+        self.assertEqual(divide(10, 3), 3.33)
+
 
 if __name__ == "__main__":
     unittest.main()

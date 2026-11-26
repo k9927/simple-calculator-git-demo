@@ -20,8 +20,8 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    """Return a divided by b."""
-    return a / b
+    """Return a divided by b, rounded to 2 decimal places."""
+    return round(a / b, 2)
 
 
 OPERATIONS = {
