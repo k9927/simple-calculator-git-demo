@@ -23,3 +23,5 @@ This repository was used to practise branching, merging and resolving an intenti
 - Exact commands, in order: [docs/STEPS.md](docs/STEPS.md)
 - Reflective note: [docs/REFLECTION.md](docs/REFLECTION.md)
 - Screenshots of the conflict and its resolution: [screenshots/](screenshots/)
+
+- Published to GitHub and kept in sync with git push / git pull
