@@ -115,10 +115,32 @@ Safety commands I could have used if the resolution went wrong (not needed this 
 
 ## 6. Publish to GitHub, then push and pull
 
+Repository: https://github.com/k9927/simple-calculator-git-demo
+
+These steps were run in PowerShell on the same machine.
+
 ```bash
-git remote add origin https://github.com/<your-username>/simple-calculator-git-demo.git
+# On github.com/new: created an empty public repo (no README, .gitignore or license)
+git remote add origin https://github.com/k9927/simple-calculator-git-demo.git
 git remote -v
 git push -u origin main
-git push origin feature/divide-by-zero feature/round-results
-git pull
+# remote: Permission to k9927/simple-calculator-git-demo.git denied to Harithik-singla.
+# Windows had a saved GitHub login for a different account, and Git used it automatically.
+# Fix: put the right account name in the remote URL so Git asks for that account's login.
+git remote set-url origin https://k9927@github.com/k9927/simple-calculator-git-demo.git
+git push -u origin main                                            # signed in as k9927
+git push -u origin feature/divide-by-zero feature/round-results
+git branch -a      # main and both feature branches, locally and under remotes/origin/
 ```
+
+To demonstrate `git pull`, I made a change on GitHub that my local copy did not have yet:
+I edited `README.md` in the browser and committed it straight to `main` (commit `d4fd648`).
+
+```bash
+git fetch          # e0a99b9..d4fd648  main -> origin/main
+git status         # "Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded."
+git pull           # fast-forwards local main from e0a99b9 to d4fd648
+git log --oneline --graph --all -n 8   # HEAD -> main and origin/main both at d4fd648
+```
+
+Screenshots: `10-fetch-behind-origin.png`, `11-log-after-pull.png`
